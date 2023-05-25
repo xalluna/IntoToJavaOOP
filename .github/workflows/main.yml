@@ -6,6 +6,11 @@ jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      issues: read
+      checks: write
         
     steps:
     - uses: actions/checkout@v3
