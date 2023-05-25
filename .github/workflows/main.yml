@@ -1,4 +1,4 @@
-name: Java CI
+name: Classroom
 
 on: [push]
 
@@ -6,20 +6,23 @@ jobs:
   build:
     name: Test
     runs-on: windows-latest
-    
-    permissions:
-      contents: read
-      issues: read
-      checks: write
-      pull-requests: write
-        
     steps:
+      - uses: actions/checkout@v2
+      - uses: education/autograding@v1
+    
+#     permissions:
+#       contents: read
+#       issues: read
+#       checks: write
+#       pull-requests: write
+        
+#     steps:
       
-    - uses: actions/checkout@v3
-    - name: Test
-      run: ./gradlew test
-    - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action/composite@v2
-      if: always()
-      with:
-        files: "build\\test-results\\test\\*.xml"
+#     - uses: actions/checkout@v3
+#     - name: Test
+#       run: ./gradlew test
+#     - name: Publish Test Results
+#       uses: EnricoMi/publish-unit-test-result-action/composite@v2
+#       if: always()
+#       with:
+#         files: "build\\test-results\\test\\*.xml"
