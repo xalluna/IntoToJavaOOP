@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Test Hello Assignment",
+      "setup": "",
+      "run": "gradle test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 5
+    }
+  ]
+}
