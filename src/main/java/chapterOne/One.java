@@ -1,7 +1,7 @@
-package ChapterOne;
+package chapterOne;
 
 public class One {
     public static void main(String[] args) {
-        System.out.print("Hello assignment!\n");
+        System.out.print("Hello!");
     }
 }

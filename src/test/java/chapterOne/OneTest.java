@@ -1,8 +1,9 @@
-package ChapterOne;
+package chapterOne;
+
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +19,7 @@ class OneTest {
         One.main(null);
 
         // assertion
-        assertEquals("Hello assignment!\n", bos.toString());
+        assertEquals("Hello!", bos.toString());
 
         // undo the binding in System
         System.setOut(originalOut);
