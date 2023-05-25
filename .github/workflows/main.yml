@@ -23,6 +23,8 @@ jobs:
       with:
         files: | 
           test-results/**/*.xml
+          test-results/**/*.trx
+          test-results/**/*.json
 
 #       - uses: actions/checkout@v3
 #       - uses: education/autograding@v1
