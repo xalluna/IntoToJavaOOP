@@ -14,11 +14,15 @@ jobs:
       pull-requests: write
         
     steps:
+      
     - uses: actions/checkout@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
     - name: Test
       run: ./gradlew test
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action/composite@v2
       if: always()
       with:
-        files: "test-results/test/*.xml"
+        files: "test-results\\test\\*.xml"
